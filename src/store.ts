@@ -61,7 +61,7 @@ export const createAppStore = () => defineStore<AppState, AppStore>(
   extendWithActions(AppActions),
   tunnelActions({
     actions: {
-      toggleSettings: (a: Action) => AppTitleActions.toggleSettings(),
+      toggleSettings: (a: Action) => SettingsActions.toggleSettings(),
     },
     dispatchFactory: (store: AppStore) => store.state$.map(s => s.settingsStore.dispatch),
   }),
